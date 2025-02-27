@@ -67,9 +67,11 @@ export const loginAdmin = async(req, res) =>{
 
         const token = await generateJWT(user.id)
 
+        const usernameSaludo = username.toUpperCase()
+
         return res.status(201).json({
             success: true,
-            msg: `BIENVIENIDO ${user.username}`,
+            msg: `BIENVIENIDO ${usernameSaludo}`,
             token: token
         })
 
