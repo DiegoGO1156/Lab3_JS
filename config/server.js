@@ -16,7 +16,7 @@ const middlewares = (app) =>{
 }
 
 const routes = (app) =>{
-    app.use("Interfer/v1/auth", authRoutes)
+    app.use("/Interfer/v1/auth", authRoutes)
 }
 
 const conectDB = async() =>{
