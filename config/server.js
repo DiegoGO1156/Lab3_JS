@@ -4,6 +4,7 @@ import helmet from "helmet"
 import morgan from "morgan"
 import { dbConnection } from "./mongo.js"
 import authRoutes from "../src/auth/authRoutes.js"
+import categoryRoutes from "../src/category/categoryRoutes.js"
 
 
 
@@ -17,6 +18,7 @@ const middlewares = (app) =>{
 
 const routes = (app) =>{
     app.use("/Interfer/v1/auth", authRoutes)
+    app.use("/Interfer/v1/category", categoryRoutes)
 }
 
 const conectDB = async() =>{
