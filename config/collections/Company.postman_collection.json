@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "e323022f-f648-42f8-904e-2f005a2480f1",
+		"name": "Company",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42665426"
+	},
+	"item": [
+		{
+			"name": "New Company",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmOTlhOGU3MTEwY2U3ZGUyZTcwNGIiLCJpYXQiOjE3NDA3OTIzMDgsImV4cCI6MTc0MDc5NTkwOH0.R1GauEgMohoyBU6CYkdAt-cWRLpOxf_O9SFvQywDF_8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Lamalawea\",\r\n    \"levelImpact\": \"Medio\",\r\n    \"yearExperience\": \"9\",\r\n    \"category\": \"Juegos mécanicos\",\r\n    \"email\": \"lamalawea@gmail.com\",\r\n    \"phone\": \"4161-4520\",\r\n    \"descripcion\": \"Es una empresa de juegos mecanicos extremos\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Interfer/v1/company/newCompany",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Interfer",
+						"v1",
+						"company",
+						"newCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get company",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmOTlhOGU3MTEwY2U3ZGUyZTcwNGIiLCJpYXQiOjE3NDA3ODY5ODMsImV4cCI6MTc0MDc5MDU4M30.tmbGl519oLsREzl_1yWmUz0teCw70MsgRWN7AfFZ5Yo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Interfer/v1/company/companies?sort=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Interfer",
+						"v1",
+						"company",
+						"companies"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get company Copy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmOTlhOGU3MTEwY2U3ZGUyZTcwNGIiLCJpYXQiOjE3NDA5NzkxMTMsImV4cCI6MTc0MDk4MjcxM30.qzwg_fkOUjcUCGa45gt8UmITR5ya7R3UQo1BY0rWTiA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nalgdonnadls\",\r\n    \"levelImpact\": \"Medio\",\r\n    \"yearExperience\": 52,\r\n    \"category\": \"Comida rápida\",\r\n    \"email\": \"pizzahut@gmail.com\",\r\n    \"phone\": \"5955-3525\",\r\n    \"descripcion\": \"Es una empresa de Pizzas muy deliciosas hechas con queso y pan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Interfer/v1/company/updateCompany/67c25556c1de7d9edf303008",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Interfer",
+						"v1",
+						"company",
+						"updateCompany",
+						"67c25556c1de7d9edf303008"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

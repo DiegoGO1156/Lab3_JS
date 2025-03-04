@@ -6,6 +6,7 @@ import { dbConnection } from "./mongo.js"
 import authRoutes from "../src/auth/authRoutes.js"
 import categoryRoutes from "../src/category/categoryRoutes.js"
 import companyRoutes from "../src/company/companyRoutes.js"
+import reportRoutes from "../src/reports/reportRoutes.js"
 
 
 
@@ -21,6 +22,7 @@ const routes = (app) =>{
     app.use("/Interfer/v1/auth", authRoutes)
     app.use("/Interfer/v1/category", categoryRoutes)
     app.use("/Interfer/v1/company", companyRoutes)
+    app.use("/Interfer/v1/report", reportRoutes)
 }
 
 const conectDB = async() =>{

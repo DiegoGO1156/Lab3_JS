@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "b55545ce-e20c-4579-b589-05a840e1434d",
+		"name": "Categories",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42665426"
+	},
+	"item": [
+		{
+			"name": "Category New",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmOTlhOGU3MTEwY2U3ZGUyZTcwNGIiLCJpYXQiOjE3NDA3MDUzNTAsImV4cCI6MTc0MDcwODk1MH0.47jYQn_anUZ3NplZEabNvjiX-fVboHxbnslYFv1UB-w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryName\": \"Juegos mécanicos\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Interfer/v1/category/newCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Interfer",
+						"v1",
+						"category",
+						"newCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Category",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmOTlhOGU3MTEwY2U3ZGUyZTcwNGIiLCJpYXQiOjE3NDA3MDUzNTAsImV4cCI6MTc0MDcwODk1MH0.47jYQn_anUZ3NplZEabNvjiX-fVboHxbnslYFv1UB-w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\": \"Comida no muy rápida 3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Interfer/v1/category/updateCategory/67c10e9efb96f1c96d8354dc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Interfer",
+						"v1",
+						"category",
+						"updateCategory",
+						"67c10e9efb96f1c96d8354dc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
