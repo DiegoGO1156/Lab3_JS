@@ -74,9 +74,11 @@ export const editCompany = async (req,res) =>{
     try {
         
         const {id} = req.params
-        const {email, phone, ...data } = req.body
+        const {name, levelImpact, yearExperience, category, phone, descripcion} = req.body
 
-        const company = await Company.findByIdAndUpdate(id, data,{new: true})
+        const findCategory = await Category.findOne({categoryName: category})
+
+        const company = await Company.findByIdAndUpdate(id, {name: name, levelImpact: levelImpact, yearExperience: yearExperience, category: findCategory._id, phone: phone, descripcion: descripcion },{new: true})
 
         return res.status(200).json({
             msg: "Datos Actualizados con Exito!!!",

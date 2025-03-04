@@ -27,8 +27,6 @@ export const validatorUpdateCompany = [
     body("levelImpact", "Ingrese el nivel de impacto").not().isEmpty(),
     body("yearExperience", "Ingrese los años de experencia de la empresa").not().isEmpty(),
     body("category", "Ingrese la categoria de la empresa").not().isEmpty(),
-    body("email", "Ingrese un correo valido").isEmail(),
-    body("email", "Ingrese un email").not().isEmpty(),
     body("descripcion", "Ingrese una descripcion sobre la empresa").isLength({min: 20}),
     validarCampos
 ]
